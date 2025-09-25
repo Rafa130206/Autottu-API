@@ -23,9 +23,21 @@ jobs:
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
+      env:
+        DB_USER: ${{ secrets.DB_USER }}
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        DB_HOST: ${{ secrets.DB_HOST }}
+        DB_PORT: ${{ secrets.DB_PORT }}
+        DB_NAME: ${{ secrets.DB_NAME }}
     
     - name: dotnet publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp 
+      env:
+        DB_USER: ${{ secrets.DB_USER }}
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        DB_HOST: ${{ secrets.DB_HOST }}
+        DB_PORT: ${{ secrets.DB_PORT }}
+        DB_NAME: ${{ secrets.DB_NAME }}
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
@@ -33,4 +45,5 @@ jobs:
         app-name: 'autottu-api-app'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_17c01a08f60943098c03bc218d54735c }}
-        package: ${{env.DOTNET_ROOT}}/myapp 
+        package: ${{env.DOTNET_ROOT}}/myapp
+
