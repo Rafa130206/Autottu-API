@@ -12,8 +12,16 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
+var dbUser = Environment.GetEnvironmentVariable("DB_USER");
+var dbPassword = Environment.GetEnvironmentVariable("DB_PASSWORD");
+var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
+var dbPort = Environment.GetEnvironmentVariable("DB_PORT") ?? "1521";
+var dbName = Environment.GetEnvironmentVariable("DB_NAME") ?? "orcl";
+
+var connectionString = $"User Id={dbUser};Password={dbPassword};Data Source={dbHost}:{dbPort}/{dbName}";
+
 builder.Services.AddDbContext<AppDbContext>(options =>
-   options.UseOracle(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseOracle(connectionString));
 
 var app = builder.Build();
 
