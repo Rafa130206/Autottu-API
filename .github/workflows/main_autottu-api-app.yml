@@ -27,6 +27,20 @@ jobs:
     - name: dotnet publish
       run: dotnet publish "AutoTTU.csproj" -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
+    - name: Azure CLI - Set App Settings
+      uses: azure/cli@v1
+      with:
+        inlineScript: |
+          az webapp config appsettings set \
+            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
+            --name autottu-api-app \
+            --settings \
+              DB_USER=${{ secrets.DB_USER }} \
+              DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
+              DB_HOST=${{ secrets.DB_HOST }} \
+              DB_PORT=${{ secrets.DB_PORT }} \
+              DB_NAME=${{ secrets.DB_NAME }}
+
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with: 
@@ -34,9 +48,3 @@ jobs:
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_57e301fd716c4011a3685e8ca233d093 }}
         package: ${{env.DOTNET_ROOT}}/myapp
-        configuration: |
-            DB_USER=${{ secrets.DB_USER }}
-            DB_PASSWORD=${{ secrets.DB_PASSWORD }}
-            DB_HOST=${{ secrets.DB_HOST }}
-            DB_PORT=${{ secrets.DB_PORT }}
-            DB_NAME=${{ secrets.DB_NAME }}
