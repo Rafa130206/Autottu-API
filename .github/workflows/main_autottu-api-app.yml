@@ -44,6 +44,6 @@ jobs:
       with:
         app-name: 'autottu-api-app'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        package: ${{env.DOTNET_ROOT}}/myapp
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_17c01a08f60943098c03bc218d54735c }}
+        package: ${{env.DOTNET_ROOT}}/myapp 
 
