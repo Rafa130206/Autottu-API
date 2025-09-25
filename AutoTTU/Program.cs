@@ -1,4 +1,3 @@
-using Oracle.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using AutoTTU.Connection;
 
@@ -18,10 +17,10 @@ var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
 var dbPort = Environment.GetEnvironmentVariable("DB_PORT") ?? "1433";
 var dbName = Environment.GetEnvironmentVariable("DB_NAME");
 
-var connectionString = $"Server={dbHost},{dbPort};Database={dbName};User Id={dbUser};Password={dbPassword};";
+var connectionString = $"Server={dbHost},{dbPort};Database={dbName};User Id={dbUser};Password={dbPassword};TrustServerCertificate=True;";
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseOracle(connectionString));
+    options.UseSqlServer(connectionString));
 
 var app = builder.Build();
 
