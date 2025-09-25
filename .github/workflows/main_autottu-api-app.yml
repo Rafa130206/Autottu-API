@@ -39,11 +39,11 @@ jobs:
         DB_PORT: ${{ secrets.DB_PORT }}
         DB_NAME: ${{ secrets.DB_NAME }}
 
-    - name: Deploy to Azure Web App
+    - name: Deploy to Azure WebApp
       uses: azure/webapps-deploy@v2
-      with: 
+      with:
         app-name: 'autottu-api-app'
-        slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_17c01a08f60943098c03bc218d54735c }}
+        slot-name: 'Production'
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: ${{env.DOTNET_ROOT}}/myapp
 
