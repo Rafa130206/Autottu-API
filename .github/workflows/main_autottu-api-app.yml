@@ -46,7 +46,7 @@ jobs:
         inlineScript: |
           az webapp config appsettings set \
             --name autottu-api-app \
-            --resource-group <SEU_RESOURCE_GROUP> \
+            --resource-group rg-autottu \
             --settings \
               DB_USER=${{ secrets.DB_USER }} \
               DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
