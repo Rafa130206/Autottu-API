@@ -45,7 +45,7 @@ jobs:
       run: echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
 
     - name: Run EF Core migrations
-      run: dotnet ef database update --project AutoTTU.csproj --context SeuDbContext
+      run: dotnet ef database update --project AutoTTU.csproj --context AppDbContext
       env:
         ConnectionStrings__DefaultConnection: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
 
