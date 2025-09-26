@@ -1,12 +1,9 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: 'Build and deploy ASP.Net Core app to Azure Web App: autottu-api-app'
 
 on:
   push:
     branches:
-    - main
+      - main
   workflow_dispatch:
 
 jobs:
@@ -38,25 +35,6 @@ jobs:
         DB_HOST: ${{ secrets.DB_HOST }}
         DB_PORT: ${{ secrets.DB_PORT }}
         DB_NAME: ${{ secrets.DB_NAME }}
-
-    - name: 'Login to Azure'
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-    - name: 'Set App Settings'
-      uses: azure/cli@v1
-      with:
-        inlineScript: |
-          az webapp config appsettings set \
-            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
-            --name autottu-api-app \
-            --settings \
-              DB_USER=${{ secrets.DB_USER }} \
-              DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
-              DB_HOST=${{ secrets.DB_HOST }} \
-              DB_PORT=${{ secrets.DB_PORT }} \
-              DB_NAME=${{ secrets.DB_NAME }}
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
