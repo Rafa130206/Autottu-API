@@ -8,13 +8,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Função auxiliar para obrigar que env var exista
-string Req(string name)
-{
-    var v = Environment.GetEnvironmentVariable(name);
-    if (string.IsNullOrWhiteSpace(v))
-        throw new InvalidOperationException($"Variável de ambiente '{name}' não definida.");
-    return v;
-}
+//string Req(string name)
+//{
+//    var v = Environment.GetEnvironmentVariable(name);
+//    if (string.IsNullOrWhiteSpace(v))
+//        throw new InvalidOperationException($"Variável de ambiente '{name}' não definida.");
+//    return v;
+//}
 
 var dbHost = Req("DB_HOST"); // ex: autotutsqlserver123.database.windows.net
 var dbPort = Environment.GetEnvironmentVariable("DB_PORT") ?? "1433";
