@@ -23,23 +23,21 @@ jobs:
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
+      env:
+        DB_USER: ${{ secrets.DB_USER }}
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        DB_HOST: ${{ secrets.DB_HOST }}
+        DB_PORT: ${{ secrets.DB_PORT }}
+        DB_NAME: ${{ secrets.DB_NAME }}
     
     - name: dotnet publish
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp 
-
-    - name: Set environment variables on Azure
-      uses: azure/CLI@v1
-      with:
-        azcliversion: 2.30.0
-        inlineScript: |
-          az webapp config appsettings set \
-            --name autottu-api-app \
-            --resource-group NOME_DO_RESOURCE_GROUP \
-            --settings \
-              DB_HOST=${{ secrets.DB_HOST }} \
-              DB_NAME=${{ secrets.DB_NAME }} \
-              DB_USER=${{ secrets.DB_USER }} \
-              DB_PASSWORD=${{ secrets.DB_PASSWORD }}
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      env:
+        DB_USER: ${{ secrets.DB_USER }}
+        DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        DB_HOST: ${{ secrets.DB_HOST }}
+        DB_PORT: ${{ secrets.DB_PORT }}
+        DB_NAME: ${{ secrets.DB_NAME }}
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
