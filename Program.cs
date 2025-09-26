@@ -15,6 +15,7 @@ var dbPort = Environment.GetEnvironmentVariable("DB_PORT") ?? "1433";
 var dbName = Environment.GetEnvironmentVariable("DB_NAME");
 
 var connectionString = $"Server={dbHost},{dbPort};Database={dbName};User Id={dbUser};Password={dbPassword};TrustServerCertificate=True;";
+Console.WriteLine($"CS (env) = {Environment.GetEnvironmentVariable("ConnectionStrings__SqlServer")}");
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(connectionString));
