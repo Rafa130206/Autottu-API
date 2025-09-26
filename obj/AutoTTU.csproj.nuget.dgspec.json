@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\labsfiap\\Source\\Repos\\Autottu-API\\AutoTTU\\AutoTTU.csproj": {}
+    "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\FIAP\\4 Semestre\\.NET\\challengenet\\Autottu-API\\AutoTTU.csproj": {}
   },
   "projects": {
-    "C:\\Users\\labsfiap\\Source\\Repos\\Autottu-API\\AutoTTU\\AutoTTU.csproj": {
+    "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\FIAP\\4 Semestre\\.NET\\challengenet\\Autottu-API\\AutoTTU.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\labsfiap\\Source\\Repos\\Autottu-API\\AutoTTU\\AutoTTU.csproj",
+        "projectUniqueName": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\FIAP\\4 Semestre\\.NET\\challengenet\\Autottu-API\\AutoTTU.csproj",
         "projectName": "AutoTTU",
-        "projectPath": "C:\\Users\\labsfiap\\Source\\Repos\\Autottu-API\\AutoTTU\\AutoTTU.csproj",
-        "packagesPath": "C:\\Users\\labsfiap\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\labsfiap\\Source\\Repos\\Autottu-API\\AutoTTU\\obj\\",
+        "projectPath": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\FIAP\\4 Semestre\\.NET\\challengenet\\Autottu-API\\AutoTTU.csproj",
+        "packagesPath": "D:\\NugetCache",
+        "outputPath": "C:\\Users\\T-GAMER\\OneDrive\\Documentos\\FIAP\\4 Semestre\\.NET\\challengenet\\Autottu-API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\Microsoft\\ComponentesToolsSDKs\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\labsfiap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\T-GAMER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -68,6 +68,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.7, )"
+            },
+            "Oracle.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.23.80, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
