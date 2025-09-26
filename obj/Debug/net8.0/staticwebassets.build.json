@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "U9mdPwHx7s55tBFz9SuO1vgr3XBf/kDA+RX2dLGUK3E=",
-  "Source": "AutoTTU",
-  "BasePath": "_content/AutoTTU",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"U9mdPwHx7s55tBFz9SuO1vgr3XBf/kDA+RX2dLGUK3E=","Source":"AutoTTU","BasePath":"_content/AutoTTU","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutoTTU")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0c418d06c1b1d11524496c4803b4e2b1f8955ae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39927b3193fef0bbbf06ba63f273058c7710f407")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutoTTU")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoTTU")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

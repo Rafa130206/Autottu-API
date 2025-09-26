@@ -237,40 +237,16 @@
             </summary>
             <param name="id">ID do usuário</param>
         </member>
-        <member name="T:AutoTTU.Migrations.InitialCreate">
+        <member name="T:AutoTTU.Migrations.InitialCreate_SqlServer">
             <inheritdoc />
         </member>
-        <member name="M:AutoTTU.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:AutoTTU.Migrations.InitialCreate_SqlServer.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:AutoTTU.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:AutoTTU.Migrations.InitialCreate_SqlServer.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:AutoTTU.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:AutoTTU.Migrations.UpdateMigration">
-            <inheritdoc />
-        </member>
-        <member name="M:AutoTTU.Migrations.UpdateMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:AutoTTU.Migrations.UpdateMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:AutoTTU.Migrations.UpdateMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:AutoTTU.Migrations.SyncModel_20250926">
-            <inheritdoc />
-        </member>
-        <member name="M:AutoTTU.Migrations.SyncModel_20250926.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:AutoTTU.Migrations.SyncModel_20250926.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:AutoTTU.Migrations.SyncModel_20250926.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+        <member name="M:AutoTTU.Migrations.InitialCreate_SqlServer.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>
