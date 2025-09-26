@@ -40,24 +40,21 @@ jobs:
         DB_PORT: ${{ secrets.DB_PORT }}
         DB_NAME: ${{ secrets.DB_NAME }}
 
-    - name: 'Login to Azure'
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-    - name: 'Set App Settings'
+    - name: Set App Settings via publish profile
       uses: azure/cli@v1
       with:
         inlineScript: |
           az webapp config appsettings set \
-            --resource-group ${{ secrets.AZURE_RESOURCE_GROUP }} \
             --name autottu-api-app \
+            --resource-group <SEU_RESOURCE_GROUP> \
             --settings \
               DB_USER=${{ secrets.DB_USER }} \
               DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
               DB_HOST=${{ secrets.DB_HOST }} \
               DB_PORT=${{ secrets.DB_PORT }} \
               DB_NAME=${{ secrets.DB_NAME }}
+        azcliversion: 2.30.0
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_57e301fd716c4011a3685e8ca233d093 }}
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
